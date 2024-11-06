@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <style>
+    /* Grundlegende Stile */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    /* Burger-Menü */
+    .burger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .burger-menu div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+
+    /* Menülinks */
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+      }
+
+      .burger-menu {
+        display: flex;
+      }
+    }
+
+    /* Showreel */
+    .showreel {
+      margin: 2rem;
+    }
+
+    .project {
+      margin: 1rem 0;
+      padding: 1rem;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h2 {
+      margin: 0 0 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mein Portfolio</h1>
+  <div class="burger-menu" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav class="nav-links" id="nav-links">
+    <a href="#projekt1">Projekt 1</a>
+    <a href="#projekt2">Projekt 2</a>
+    <a href="#projekt3">Projekt 3</a>
+  </nav>
+</header>
+
+<main class="showreel">
+  <section class="project" id="projekt1">
+    <h2>Projekt 1</h2>
+    <p>Beschreibung des Projekts 1. Hier könnten Bilder oder ein Video eingebunden werden.</p>
+  </section>
+
+  <section class="project" id="projekt2">
+    <h2>Projekt 2</h2>
+    <p>Beschreibung des Projekts 2. Hier könnten Bilder oder ein Video eingebunden werden.</p>
+  </section>
+
+  <section class="project" id="projekt3">
+    <h2>Projekt 3</h2>
+    <p>Beschreibung des Projekts 3. Hier könnten Bilder oder ein Video eingebunden werden.</p>
+  </section>
+</main>
+
+<script>
+  // Toggle-Funktion für das Burger-Menü
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>
