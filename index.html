@@ -21,12 +21,16 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem;
-      background-color: #e6b505;
+      background-color: #333;
       color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 1.5rem;
       font-weight: 400; /* Josefin Sans Regular für den Header-Titel */
     }
 
@@ -75,25 +79,45 @@
 
     /* Showreel */
     .showreel {
-      margin: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      margin-top: 60px; /* Platz für den festen Header */
+      overflow: hidden;
+    }
+
+    /* Projektcontainer mit fixem Seitenverhältnis 1920x1080 */
+    .project {
+      width: 100%;
+      max-width: 1920px;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+      padding: 2rem;
+      box-sizing: border-box;
     }
 
     /* Titel im Showreel mit Josefin Sans Regular */
     .project h2 {
       font-weight: 400;
+      font-size: 2rem;
       margin: 0 0 0.5rem;
     }
 
     /* Text im Showreel mit Josefin Sans Thin */
     .project p {
       font-weight: 100;
-    }
-
-    .project {
-      margin: 1rem 0;
-      padding: 1rem;
-      background-color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1.2rem;
+      text-align: center;
+      max-width: 800px;
     }
   </style>
 </head>
@@ -140,3 +164,4 @@
 
 </body>
 </html>
+
