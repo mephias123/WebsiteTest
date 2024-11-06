@@ -5,19 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Website</title>
   <!-- Josefin Sans von Google Fonts einbinden -->
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;700&display=swap" rel="stylesheet">
   <style>
     /* Grundlegende Stile */
     body {
       font-family: 'Josefin Sans', sans-serif;
-      font-weight: 400; /* Normalgewicht */
-      }
-
-      /* Leichtere Schrift für bestimmte Elemente */
-      .light-text {
-      font-weight: 200; /* Leichtes Gewicht */
-      }
-;
       margin: 0;
       padding: 0;
       background-color: #f4f4f4;
@@ -35,6 +27,7 @@
 
     header h1 {
       font-size: 1.5rem;
+      font-weight: 400; /* Josefin Sans Regular für den Header-Titel */
     }
 
     /* Burger-Menü */
@@ -85,15 +78,22 @@
       margin: 2rem;
     }
 
+    /* Titel im Showreel mit Josefin Sans Regular */
+    .project h2 {
+      font-weight: 400;
+      margin: 0 0 0.5rem;
+    }
+
+    /* Text im Showreel mit Josefin Sans Thin */
+    .project p {
+      font-weight: 100;
+    }
+
     .project {
       margin: 1rem 0;
       padding: 1rem;
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .project h2 {
-      margin: 0 0 0.5rem;
     }
   </style>
 </head>
@@ -115,7 +115,7 @@
 
 <main class="showreel">
   <section class="project" id="projekt1">
-    <h2 class="light-text">Projekt 1</h2>
+    <h2>Projekt 1</h2>
     <p>Beschreibung des Projekts 1. Hier könnten Bilder oder ein Video eingebunden werden.</p>
   </section>
 
